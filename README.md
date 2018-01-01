@@ -40,3 +40,18 @@ str = str.replace(/(\$|\,)/g, ""));
 ```
 str = str.replace(/^0{2,}/g, "");
 ```
+
+---
+
+### Web
+
+**Match all content within a specific HTML tag** (*Replace "p" with whatever tag you want*)
+```
+str.match(/<p>(\n|.)*<\/p>/gi); //Returns either null or an array of matches
+```
+
+**Match all HTML tags**
+```
+str.match(/<\/?.+>/g); //Returns either null or an array of matches
+```
+
