@@ -14,6 +14,8 @@ Useful RegEx snippets that are categorized and searchable (see below)
 /^.+\.(jpg|jpeg|png|gif|bmp|svg)$/gi.test(str) //Returns either true or false
 ```
 
+---
+
 ### Miscellaneous
 **Verify whether a `str` is a valid hexadecimal color**
 ```
@@ -24,6 +26,8 @@ Useful RegEx snippets that are categorized and searchable (see below)
 ```
 /^[0-9]{5}(-[0-9]{4})?$/.test(str) //Returns either true or false
 ```
+
+---
 
 ### Numbers
 
