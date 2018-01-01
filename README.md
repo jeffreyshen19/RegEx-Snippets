@@ -12,7 +12,11 @@ Useful RegEx snippets that are categorized and searchable (see below)
 **Verify whether a `str` is a valid hexadecimal color**
 ```
 /^#([0-9a-f]{3}$|[0-9a-f]{6}$)/i.test(str) //Returns either true or false
+```
 
+**Verify ZIP Codes (5 digit and 9 digit)**
+```
+/^[0-9]{5}(-[0-9]{4})?$/.test(str) //Returns either true or false
 ```
 
 ### Numbers
