@@ -8,6 +8,12 @@ Useful RegEx snippets that are categorized and searchable (see below)
 
 ## Snippets
 
+### Files
+**Verify whether a string is a image filename**
+```
+/^.+\.(jpg|jpeg|png|gif|bmp|svg)$/gi.test(str) //Returns either true or false
+```
+
 ### Miscellaneous
 **Verify whether a `str` is a valid hexadecimal color**
 ```
