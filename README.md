@@ -17,6 +17,11 @@ Useful RegEx snippets that are categorized and searchable (see below)
 ---
 
 ### Miscellaneous
+**Verify email addresses**
+```
+/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(email); //Returns either true or false
+```
+
 **Verify whether a `str` is a valid hexadecimal color**
 ```
 /^#([0-9a-f]{3}$|[0-9a-f]{6}$)/i.test(str) //Returns either true or false
