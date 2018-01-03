@@ -9,4 +9,3 @@ Unordered list of snippet ideas that haven't been implemented yet.
 * Verify Credit cards
 * Match url params
 * Match filetypes
-* Thousands seperator
