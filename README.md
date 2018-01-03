@@ -45,6 +45,13 @@ str = str.replace(/^0{2,}/g, "");
 
 ### Web
 
+**Extract URL from an anchor tag**
+For example, if `str` = "<a href = 'https://www.google.com'></a>", this RegEx would return "https://www.google.com".  
+
+```
+str.match(/<a\s+(?:[^>]*?\s+)?href ?= ?["']([^'^"]*)["'][^>]*>/i)[1] 
+```
+
 **Match all content within a specific HTML tag** (*Replace "p" with whatever tag you want*)
 ```
 str.match(/<p>(\n|.)*<\/p>/gi); //Returns either null or an array of matches
