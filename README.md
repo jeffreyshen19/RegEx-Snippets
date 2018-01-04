@@ -22,6 +22,12 @@ Useful RegEx snippets that are categorized and searchable (see below)
 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(email); //Returns either true or false
 ```
 
+**Verify US Phone Numbers**  
+Matches ###-###-####, (###) ###-####, and ### ### ####
+```
+/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/.test(phone_num); //Returns either true or false
+```
+
 **Verify whether a `str` is a valid hexadecimal color**
 ```
 /^#([0-9a-f]{3}$|[0-9a-f]{6}$)/i.test(str) //Returns either true or false
