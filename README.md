@@ -17,6 +17,32 @@ Useful RegEx snippets that are categorized and searchable (see below)
 ---
 
 ### Miscellaneous
+**Verify credit cards**  
+Amex: 
+```
+/^3[47][0-9]{13}$/.test(str);
+```
+
+Discover: 
+```
+/^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/.test(str);
+```
+
+Mastercard: 
+```
+/^5[1-5][0-9]{14}$/.test(str);
+```
+
+Visa: 
+```
+/^4[0-9]{12}(?:[0-9]{3})?$/.test(str);
+```
+
+Visa Mastercard: 
+```
+/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/.test(str);
+```
+
 **Verify email addresses**
 ```
 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(email); //Returns either true or false
