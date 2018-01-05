@@ -17,7 +17,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
 ---
 
 ### Miscellaneous
-**Verify credit cards**  
+**Verify credit cards** (Make sure to strip the string of all commas, spaces, etc. before matching)  
 Amex: 
 ```
 /^3[47][0-9]{13}$/.test(str);
