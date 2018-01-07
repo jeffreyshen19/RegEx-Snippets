@@ -99,3 +99,8 @@ str.match(/<p>(\n|.)*<\/p>/gi); //Returns either null or an array of matches
 str.match(/<\/?.+>/g); //Returns either null or an array of matches
 ```
 
+**Match IPv4 Addresses**
+```
+/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(str);
+```
+
