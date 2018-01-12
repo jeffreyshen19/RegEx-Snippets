@@ -6,9 +6,14 @@ Useful RegEx snippets that are categorized and searchable (see below)
 
 ## Table of Contents
 
+* [Files](#files)
+* [Miscellaneous](#miscellaneous)
+* [Numbers](#numbers)
+* [Web](#web)
+
 ## Snippets
 
-### Files
+### Files <a name="files"></a>
 **Verify whether a string is a image filename**
 ```
 /^.+\.(jpg|jpeg|png|gif|bmp|svg)$/gi.test(str) //Returns either true or false
@@ -16,7 +21,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
 
 ---
 
-### Miscellaneous
+### Miscellaneous <a name="miscellaneous"></a>
 **Verify credit cards** (Make sure to strip the string of all commas, spaces, etc. before matching)  
 Amex: 
 ```
@@ -66,7 +71,7 @@ Matches ###-###-####, (###) ###-####, and ### ### ####
 
 ---
 
-### Numbers
+### Numbers <a name="numbers"></a>
 
 **Remove dollar signs and comma separators from a number**:
 ```
@@ -80,7 +85,7 @@ str = str.replace(/^0{2,}/g, "");
 
 ---
 
-### Web
+### Web <a name="web"></a>
 
 **Extract URL from an anchor tag**  
 For example, if `str` = "&lt;a href = 'https://www.google.com' &gt;&lt;/a&gt;", this RegEx would return "https://www.google.com".  
