@@ -7,9 +7,21 @@ Useful RegEx snippets that are categorized and searchable (see below)
 ## Table of Contents
 
 * [Files](#files)
+  * Verify whether a string is a image filename
 * [Miscellaneous](#miscellaneous)
+  * Verify credit cards
+  * Verify email addresses
+  * Verify US Phone Numbers
+  * Verify whether a `str` is a valid hexadecimal color
+  * Verify ZIP Codes (5 digit and 9 digit)
 * [Numbers](#numbers)
+  * Remove dollar signs and comma separators from a number
+  * Remove leading zeroes in a number
 * [Web](#web)
+  * Extract URL from an anchor tag
+  * Match all content within a specific HTML tag
+  * Match all HTML tags
+  * Match IPv4 Addresses
 
 ## Snippets
 
