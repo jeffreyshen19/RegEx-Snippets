@@ -3,6 +3,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
 * **Contributions are welcome**! Please read our CONTRIBUTING, CODE_OF_CONDUCT, and LICENSE files to get started. RegEx snippet ideas are located in IDEAS.md.
 * **Errors?** Submit an issue, or even better, submit a PR fixing the issue!
 * Code examples use Javascript, but the use of RegEx should not differ significantly across languages.
+* RegEx snippets are either user-created, or picked from across the web.
 
 ## Table of Contents
 
@@ -124,5 +125,5 @@ str.match(/<\/?.+>/g); //Returns either null or an array of matches
 
 **Match URLs**
 ```
-/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/
+/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(str);
 ```
