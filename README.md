@@ -36,6 +36,8 @@ Accepts mm/dd/yyyy, mm-dd-yyyy, or mm.dd.yyyy and doesn't care about leading zer
 /^[0-3]?[0-9](\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
 ```
 
+---
+
 ### Files <a name="files"></a>
 **Verify whether a string is a image filename**
 ```
