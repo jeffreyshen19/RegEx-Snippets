@@ -7,6 +7,8 @@ Useful RegEx snippets that are categorized and searchable (see below)
 
 ## Table of Contents
 
+* [Dates](#dates)
+  * Verify mm/dd/yyyy
 * [Files](#files)
   * Verify whether a string is a image filename
 * [Miscellaneous](#miscellaneous)
@@ -26,6 +28,13 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Match URLs
 
 ## Snippets
+
+### Dates <a name="dates"></a>
+**Verify mm/dd/yyyy**  
+Accepts mm/dd/yyyy, mm-dd-yyyy, or mm.dd.yyyy and doesn't care about leading zeroes. 
+```
+/^[0-3]?[0-9](\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
+```
 
 ### Files <a name="files"></a>
 **Verify whether a string is a image filename**
