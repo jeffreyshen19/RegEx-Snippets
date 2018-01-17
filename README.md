@@ -9,6 +9,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
 
 * [Dates](#dates)
   * Verify mm/dd/yyyy
+  * Verify mon/dd/yyyy
 * [Files](#files)
   * Verify whether a string is a image filename
 * [Miscellaneous](#miscellaneous)
@@ -34,6 +35,12 @@ Useful RegEx snippets that are categorized and searchable (see below)
 Accepts mm/dd/yyyy, mm-dd-yyyy, or mm.dd.yyyy and doesn't care about leading zeroes. 
 ```
 /^[0-3]?[0-9](\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
+```
+
+**Verify mon/dd/yyyy**  
+Accepts mon/dd/yyyy, mon-dd-yyyy, or mon.dd.yyyy and doesn't care about leading zeroes or case. For example, will match "jan/10/2017"
+```
+/^(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)(\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
 ```
 
 ---
