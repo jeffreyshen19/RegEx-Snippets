@@ -44,7 +44,7 @@ Accepts mon/dd/yyyy, mon-dd-yyyy, or mon.dd.yyyy and doesn't care about leading 
 /^(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)(\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
 ```
 
-**Verify month names**
+**Verify month names**  
 Accepts month names (both full and abbreviated), and doesn't care about case. For example, it will match "January" and "jan".
 ```
 /^(jan(uary)?|feb(ruary)?|(mar)?ch|(apr)?il|may|(jun)?e|(jul)?y|(aug)?ust|sep(tember)?|sept|(oct)?ober|(nov)?ember|(dec)?ember)$/i.test(str);
