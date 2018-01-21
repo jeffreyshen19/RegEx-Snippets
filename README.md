@@ -23,6 +23,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Remove dollar signs and comma separators from a number
   * Remove leading zeroes in a number
 * [Strings](#strings)
+  * Verify strong passwords (At least one lower case, one upper case, one number, one special character, and 10 characters long) 
   * Verify usernames (alphanumeric string of a certain length)
 * [Web](#web)
   * Extract URL from an anchor tag
@@ -128,6 +129,11 @@ str = str.replace(/^0{2,}/g, "");
 ---
 
 ### Strings <a name="strings"></a>
+
+**Verify strong passwords (At least one lower case, one upper case, one number, one special character, and 10 characters long)**:
+```
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_])[A-Za-z\d$@$!%*?&_]{10,}$/
+```
 
 **Verify usernames (alphanumeric string of a certain length)**:  
 Replace MIN_CHARS and MAX_CHARS with the minimum and maximum length of the username, respectively. 
