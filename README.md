@@ -22,6 +22,8 @@ Useful RegEx snippets that are categorized and searchable (see below)
 * [Numbers](#numbers)
   * Remove dollar signs and comma separators from a number
   * Remove leading zeroes in a number
+* [Strings](#strings)
+  * Verify usernames (alphanumeric string of a certain length)
 * [Web](#web)
   * Extract URL from an anchor tag
   * Match all content within a specific HTML tag
@@ -121,6 +123,16 @@ str = str.replace(/(\$|\,)/g, ""));
 **Remove leading zeroes in a number**:    
 ```
 str = str.replace(/^0{2,}/g, "");
+```
+
+---
+
+### Strings <a name="strings"></a>
+
+**Verify usernames (alphanumeric string of a certain length)**:  
+Replace MIN_CHARS and MAX_CHARS with the minimum and maximum length of the username, respectively. 
+```
+/^[a-z0-9]{MIN_CHARS,MAX_CHARS}$/i.test(str) //Returns either true or false
 ```
 
 ---
