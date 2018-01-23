@@ -31,6 +31,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Match all HTML tags
   * Match IPv4 Addresses
   * Match URLs
+  * Match URL slugs
 
 ## Snippets
 
@@ -170,4 +171,9 @@ str.match(/<\/?.+>/g); //Returns either null or an array of matches
 **Match URLs**
 ```
 /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(str);
+```
+
+**Match URL Slug**
+```
+/^[a-z0-9-_]+$/i
 ```
