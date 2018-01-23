@@ -30,6 +30,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Match all content within a specific HTML tag
   * Match all HTML tags
   * Match IPv4 Addresses
+  * Match Twitter usernames
   * Match URLs
   * Match URL slugs
 
@@ -166,6 +167,11 @@ str.match(/<\/?.+>/g); //Returns either null or an array of matches
 **Match IPv4 Addresses**
 ```
 /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(str);
+```
+
+**Match Twitter Usernames**
+```
+/^@?(\w){1,15}$/
 ```
 
 **Match URLs**
