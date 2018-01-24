@@ -32,6 +32,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Match IPv4 Addresses
   * Match Twitter usernames
   * Match URLs
+  * Match URL safe strings
   * Match URL slugs
 
 ## Snippets
@@ -177,6 +178,11 @@ str.match(/<\/?.+>/g); //Returns either null or an array of matches
 **Match URLs**
 ```
 /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(str);
+```
+
+**Match URL safe strings**
+```
+/^[a-zA-Z0-9_-]*$/
 ```
 
 **Match URL Slug**
