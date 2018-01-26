@@ -2,7 +2,6 @@
 Useful RegEx snippets that are categorized and searchable (see below)
 * **Contributions are welcome**! Please read our CONTRIBUTING, CODE_OF_CONDUCT, and LICENSE files to get started. RegEx snippet ideas are located in IDEAS.md.
 * **Errors?** Submit an issue, or even better, submit a PR fixing the issue!
-* Code examples use Javascript, but the use of RegEx should not differ significantly across languages.
 * RegEx snippets are either user-created, or picked from across the web.
 
 ## Table of Contents
@@ -24,7 +23,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Remove leading zeroes in a number
 * [Strings](#strings)
   * Match new lines
-  * Verify strong passwords (At least one lower case, one upper case, one number, one special character, and 10 characters long) 
+  * Verify strong passwords (At least one lower case, one upper case, one number, one special character, and 10 characters long)
   * Verify usernames (alphanumeric string of a certain length)
 * [Web](#web)
   * Extract URL from an anchor tag
@@ -40,21 +39,21 @@ Useful RegEx snippets that are categorized and searchable (see below)
 
 ### Dates <a name="dates"></a>
 **Verify mm/dd/yyyy**  
-Accepts mm/dd/yyyy, mm-dd-yyyy, or mm.dd.yyyy and doesn't care about leading zeroes. 
+Accepts mm/dd/yyyy, mm-dd-yyyy, or mm.dd.yyyy and doesn't care about leading zeroes.
 ```
-/^[0-3]?[0-9](\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
+/^[0-3]?[0-9](\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi
 ```
 
 **Verify mon/dd/yyyy**  
 Accepts mon/dd/yyyy, mon-dd-yyyy, or mon.dd.yyyy and doesn't care about leading zeroes or case. For example, will match "jan/10/2017"
 ```
-/^(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)(\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi.test(str) //Returns either true or false
+/^(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)(\/|\.|-)[0-3]?[0-9](\/|\.|-)[1-9]\d{3}$/gi
 ```
 
 **Verify month names**  
 Accepts month names (both full and abbreviated), and doesn't care about case. For example, it will match "January" and "jan".
 ```
-/^(jan(uary)?|feb(ruary)?|(mar)?ch|(apr)?il|may|(jun)?e|(jul)?y|(aug)?ust|sep(tember)?|sept|(oct)?ober|(nov)?ember|(dec)?ember)$/i.test(str);
+/^(jan(uary)?|feb(ruary)?|(mar)?ch|(apr)?il|may|(jun)?e|(jul)?y|(aug)?ust|sep(tember)?|sept|(oct)?ober|(nov)?ember|(dec)?ember)$/i;
 ```
 
 
@@ -63,57 +62,57 @@ Accepts month names (both full and abbreviated), and doesn't care about case. Fo
 ### Files <a name="files"></a>
 **Verify whether a string is a image filename**
 ```
-/^.+\.(jpg|jpeg|png|gif|bmp|svg)$/gi.test(str) //Returns either true or false
+/^.+\.(jpg|jpeg|png|gif|bmp|svg)$/gi
 ```
 
 ---
 
 ### Miscellaneous <a name="miscellaneous"></a>
 **Verify credit cards** (Make sure to strip the string of all commas, spaces, etc. before matching)  
-Amex: 
+Amex:
 ```
-/^3[47][0-9]{13}$/.test(str);
-```
-
-Discover: 
-```
-/^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/.test(str);
+/^3[47][0-9]{13}$/;
 ```
 
-Mastercard: 
+Discover:
 ```
-/^5[1-5][0-9]{14}$/.test(str);
-```
-
-Visa: 
-```
-/^4[0-9]{12}(?:[0-9]{3})?$/.test(str);
+/^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/;
 ```
 
-Visa Mastercard: 
+Mastercard:
 ```
-/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/.test(str);
+/^5[1-5][0-9]{14}$/;
+```
+
+Visa:
+```
+/^4[0-9]{12}(?:[0-9]{3})?$/;
+```
+
+Visa Mastercard:
+```
+/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/;
 ```
 
 **Verify email addresses**
 ```
-/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(email); //Returns either true or false
+/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
 ```
 
 **Verify US Phone Numbers**  
 Matches ###-###-####, (###) ###-####, and ### ### ####
 ```
-/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/.test(phone_num); //Returns either true or false
+/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
 ```
 
 **Verify whether a `str` is a valid hexadecimal color**
 ```
-/^#([0-9a-f]{3}$|[0-9a-f]{6}$)/i.test(str) //Returns either true or false
+/^#([0-9a-f]{3}$|[0-9a-f]{6}$)/i
 ```
 
 **Verify ZIP Codes (5 digit and 9 digit)**
 ```
-/^[0-9]{5}(-[0-9]{4})?$/.test(str) //Returns either true or false
+/^[0-9]{5}(-[0-9]{4})?$/
 ```
 
 ---
@@ -122,12 +121,12 @@ Matches ###-###-####, (###) ###-####, and ### ### ####
 
 **Remove dollar signs and comma separators from a number**:
 ```
-str = str.replace(/(\$|\,)/g, ""));
+/(\$|\,)/g
 ```
 
 **Remove leading zeroes in a number**:    
 ```
-str = str.replace(/^0{2,}/g, "");
+/^0{2,}/g
 ```
 
 ---
@@ -145,9 +144,9 @@ str = str.replace(/^0{2,}/g, "");
 ```
 
 **Verify usernames (alphanumeric string of a certain length)**:  
-Replace MIN_CHARS and MAX_CHARS with the minimum and maximum length of the username, respectively. 
+Replace MIN_CHARS and MAX_CHARS with the minimum and maximum length of the username, respectively.
 ```
-/^[a-z0-9]{MIN_CHARS,MAX_CHARS}$/i.test(str) //Returns either true or false
+/^[a-z0-9]{MIN_CHARS,MAX_CHARS}$/i
 ```
 
 ---
@@ -158,7 +157,7 @@ Replace MIN_CHARS and MAX_CHARS with the minimum and maximum length of the usern
 For example, if `str` = "&lt;a href = 'https://www.google.com' &gt;&lt;/a&gt;", this RegEx would return "https://www.google.com".  
 
 ```
-str.match(/<a\s+(?:[^>]*?\s+)?href ?= ?["']([^'^"]*)["'][^>]*>/i)[1] 
+str.match(/<a\s+(?:[^>]*?\s+)?href ?= ?["']([^'^"]*)["'][^>]*>/i)[1]
 ```
 
 **Match all content within a specific HTML tag** (*Replace "p" with whatever tag you want*)
@@ -173,7 +172,7 @@ str.match(/<\/?.+>/g); //Returns either null or an array of matches
 
 **Match IPv4 Addresses**
 ```
-/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(str);
+/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 ```
 
 **Match Twitter Usernames**
@@ -183,7 +182,7 @@ str.match(/<\/?.+>/g); //Returns either null or an array of matches
 
 **Match URLs**
 ```
-/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(str);
+/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
 ```
 
 **Match URL safe strings**
