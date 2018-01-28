@@ -167,7 +167,7 @@ str.match(/<p>(\n|.)*<\/p>/gi); //Returns either null or an array of matches
 
 **Match all HTML tags**
 ```
-str.match(/<\/?.+>/g); //Returns either null or an array of matches
+str.match(/<\/?[^>]+>/g); //Returns either null or an array of matches
 ```
 
 **Match IPv4 Addresses**
