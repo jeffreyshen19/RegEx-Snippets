@@ -13,6 +13,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
 * [Files](#files)
   * Verify whether a string is a image filename
 * [Miscellaneous](#miscellaneous)
+  * City, state abbreviation
   * Verify credit cards
   * Verify email addresses
   * Verify US Phone Numbers
@@ -68,6 +69,11 @@ Accepts month names (both full and abbreviated), and doesn't care about case. Fo
 ---
 
 ### Miscellaneous <a name="miscellaneous"></a>
+**City, state abbreviation** (Matches "Los Angeles, CA" for example)
+```
+/[a-zA-Z\s]*, [A-Z][A-Z]/
+```
+
 **Verify credit cards** (Make sure to strip the string of all commas, spaces, etc. before matching)  
 Amex:
 ```
