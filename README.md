@@ -13,7 +13,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
 * [Files](#files)
   * Match image filenames
 * [Miscellaneous](#miscellaneous)
-  * Match ity, state abbreviation
+  * Match city, state abbreviation
   * Match credit cards
   * Match email addresses
   * Match US Phone Numbers
