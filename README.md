@@ -18,6 +18,7 @@ Useful RegEx snippets that are categorized and searchable (see below)
   * Match email addresses
   * Match US Phone Numbers
   * Match valid hexadecimal colors
+  * Match social security number
   * Match ZIP Codes (5 digit and 9 digit)
 * [Numbers](#numbers)
   * Match dollar signs and comma separators in a number
@@ -114,6 +115,12 @@ Matches ###-###-####, (###) ###-####, and ### ### ####
 **Match valid hexadecimal colors**
 ```
 /^#([0-9a-f]{3}$|[0-9a-f]{6}$)/i
+```
+
+**Match social security number**  
+Matches ###-##-####
+```
+/^[0-9]\{3\}-[0-9]\{2\}-[0-9]\{4\}$/
 ```
 
 **Match ZIP Codes (5 digit and 9 digit)**
